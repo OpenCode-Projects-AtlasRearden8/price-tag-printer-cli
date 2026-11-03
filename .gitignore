@@ -1,4 +1,11 @@
 
 # Generated sample outputs
+*.pyc
+.env
+.env.*
+.venv/
 /sample/inventory.html
 /sample/inventory.pdf
+__pycache__/
+dist/*.tmp
+node_modules/

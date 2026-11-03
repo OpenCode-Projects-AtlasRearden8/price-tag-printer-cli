@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "price-tag-printer"
+version = "1.0.0"
+description = "Print-ready price tags and shelf labels from a simple CSV — HTML and PDF, barcode-ready, fully offline."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "Asdale Dynamics, LLC" }]
+keywords = ["price tags", "shelf labels", "barcode", "code128", "retail", "flea-market", "ebay"]
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Printing",
+    "Topic :: Office/Business",
+]
+dependencies = []
+
+[project.scripts]
+pricetag = "pricetag.cli:main"
+
+[tool.setuptools]
+packages = ["pricetag"]
+
+[tool.setuptools.package-data]
+"pricetag" = ["fonts/*.ttf", "fonts/LICENSE-DejaVu.txt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
